@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>XYZ Automation</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+    <script type='text/javascript' src='js/dynamicpage.js'></script>
+
+</head>
+<body>
+	<ul class="topnav center">
+		<li><a class="active" style="cursor:pointer" onclick="openNav()"> ☰ </a></li>
+		<li><a href="#">XYZ Home Automation</a></li>
+		<li style="float:right"><a href="#">Logout</a></li>
+		<li style="float:right"><a href="#">Hello, James</a></li>
+</ul>
+	<div id="navbar" class="sidenav">
+		<p class="centered"><a href="#"><img src="images/user1.jpg" class="img-circle" width="60"></a></p>
+		<h3 class="centered">James Hargrave</h3>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> × </a>
+		<div>
+			<ul>
+				<li><a href="index.html">Dashboard</a></li>
+			</ul>
+			<h4 class="centered">Security</h4>
+			<ul>
+				<li><a href="#">Cameras</a></li>
+				<li><a href="#">Locks</a></li>
+				<li><a href="#">Sensors</a></li>
+				<li><a href="#">Alarm</a></li>
+			</ul>
+		</div>
+		<div>
+			<h4 class="centered">Energy</h4>
+			<ul>
+				<li><a href="#">Lights</a></li>
+				<li><a class="active" href="climate.html">Climate</a></li>
+				<li><a href="#">Appliances</a></li>
+				<li><a href="#">Sprinklers</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+
+	</div>
+	<script>
+	function openNav() {
+		document.getElementById("navbar").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "250px";
+		document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+	}
+	function closeNav() {
+		document.getElementById("navbar").style.width = "0";
+		document.getElementById("main").style.marginLeft= "0";
+		document.body.style.backgroundColor = "rgba(229, 214, 194, 1)";
+	}
+
+  $(document).ready(function() {
+    $("#climate").click(function() {
+      $("#main").load("climate.html");
+    });
+  });
+	</script>
+</body>
+</html>

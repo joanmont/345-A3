@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>XYZ Automation</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+    <script type='text/javascript' src='js/dynamicpage.js'></script>
+
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#climate").click(function() {
+				$("#main").load("climate.html");
+			});
+		});
+		</script>
+</head>
+<body>
+	<ul class="topnav center">
+		<li><a class="active" style="cursor:pointer" onclick="openNav()"> ☰ </a></li>
+		<li><a href="#">XYZ Home Automation</a></li>
+		<li style="float:right"><a href="#">Logout</a></li>
+		<li style="float:right"><a href="#">Hello, James</a></li>
+</ul>
+	<div id="navbar" class="sidenav">
+		<p class="centered"><a href="#"><img src="images/user1.jpg" class="img-circle" width="60"></a></p>
+		<h3 class="centered">James Hargrave</h3>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> × </a>
+		<div>
+			<ul>
+				<li><a class="active" href="#">Dashboard</a></li>
+			</ul>
+			<h4 class="centered">Security</h4>
+			<ul>
+				<li><a href="#">Cameras</a></li>
+				<li><a href="#">Locks</a></li>
+				<li><a href="#">Sensors</a></li>
+				<li><a href="#">Alarm</a></li>
+			</ul>
+		</div>
+		<div>
+			<h4 class="centered">Energy</h4>
+			<ul>
+				<li><a href="#">Lights</a></li>
+				<li><a href="climate.html">Climate</a></li>
+				<li><a href="#">Appliances</a></li>
+				<li><a href="#">Sprinklers</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div style="width: 100%;">
+			<div style="float:left; width: 50%">
+				<div id="main-container">
+					<h1 class = "centered">Security</h1>
+					<div class="grid-half">
+						<a href="#" class="ui-link">
+							<img src="images/security-camera.svg" alt="Camera Icon" style="width:120px;height:120px;border:0;">
+							<span class="grid-icon-container">
+								<span class="icon-font"> Cameras </span>
+							</span>
+						</a>
+					</div>
+					<div class="grid-half last">
+						<a href="#" class="ui-link">
+							<img src="images/door-lock.svg" alt="Lock Icon" style="width:120px;height:120px;border:0;">
+							<span class="grid-icon-container">
+								<span class="icon-font"> Locks </span>
+							</span>
+						</a>
+					</div>
+					<div class="grid-half grid-btop">
+						<a href="#" class="ui-link">
+							<img src="images/sensor.svg" alt="Sensor Icon" style="width:120px;height:120px;border:0;">
+							<span class="grid-icon-container">
+								<span class="icon-font"> Sensors </span>
+							</span>
+						</a>
+					</div>
+					<div class="grid-half last grid-btop">
+						<a href="#" class="ui-link">
+							<img src="images/alarm.svg" alt="Alarm Icon" style="width:120px;height:120px;border:0;">
+							<span class="grid-icon-container">
+								<span class="icon-font"> Alarms </span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div style="float:left; width: 50%">
+				<div id='main-container'>
+					<h1 class = "centered">Energy</h1>
+					<div class="grid-half">
+						<a href="#" class="ui-link">
+							<img src="images/light.svg" alt="Light Icon" style="width:120px;height:120px;border:0;">
+							<span class="grid-icon-container">
+								<span class="icon-font icon-glass"> Lights</span>
+							</span>
+						</a>
+					</div>
+					<div class="grid-half last">
+						<a href="climate.html" class="ui-link">
+							<img src="images/temperature.svg" alt="Light Icon" style="width:120px;height:120px;border:0;">
+							<span class="grid-icon-container">
+								<span class="icon-font icon-b">Climate</span>
+							</span>
+						</a>
+					</div>
+					<div class="grid-half grid-btop">
+						<a href="#" class="ui-link">
+							<img src="images/appliances.svg" alt="Light Icon" style="width:120px;height:120px;border:0;">
+							<span class="grid-icon-container">
+								<span class="icon-font icon-c">Appliances</span>
+							</span>
+						</a>
+					</div>
+					<div class="grid-half last grid-btop">
+						<a href="#" class="ui-link">
+							<img src="images/water.svg" alt="Light Icon" style="width:120px;height:120px;border:0;">
+							<span class="grid-icon-container">
+								<span class="icon-font icon-d">Water Efficiency</span>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+	function openNav() {
+		document.getElementById("navbar").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "250px";
+		document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+	}
+	function closeNav() {
+		document.getElementById("navbar").style.width = "0";
+		document.getElementById("main").style.marginLeft= "0";
+		document.body.style.backgroundColor = "rgba(229, 214, 194, 1)";
+	}
+	</script>
+</body>
+</html>
